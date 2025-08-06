@@ -1,4 +1,14 @@
+export const config = {
+  api: {
+    bodyParser: true, // ✅ 告訴 Vercel 這是 JSON API
+  },
+};
+
 export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
   const prompt = req.body.prompt;
 
   if (!prompt) {
