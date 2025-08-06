@@ -1,0 +1,9 @@
+{
+  "regions": ["sin1"],
+  "functions": {
+    "api/gpt.js": {
+      "memory": 512,
+      "maxDuration": 10
+    }
+  }
+}
